@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flexbox</title>
+</head>
+<body>
+
+    <h1>FLEX</h1>
+
+    <h2>Basic</h2>
+    
+    <h3>display:flex</h3>
+    <div style="display: flex;">
+        <div style="background-color: aqua;">1</div>
+        <div style="background-color: brown;">2</div>
+        <div style="background-color: darkgoldenrod;">3</div>
+    </div>
+
+    <h2>Nested</h2>
+
+    <div style="display: flex;">
+        <div style="background-color: aqua;">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+        <div style="background-color: brown;">2</div>
+        <div style="background-color: darkgoldenrod;">3</div>
+    </div>
+
+    <h2>Horizontal Alignment</h2>
+
+    <h3>display:flex; justify-content: center;</h3>
+    <div style="display: flex; justify-content: center;">
+        <div style="background-color: aqua; padding: 80px;">1</div>
+        <div style="background-color: brown; padding: 80px;">2</div>
+        <div style="background-color: darkgoldenrod; padding: 80px;">3</div>
+    </div>
+
+    <h3>display:flex; justify-content: flex-start;</h3>
+    <div style="display: flex; justify-content: flex-start;">
+        <div style="background-color: aqua; padding: 80px;">1</div>
+        <div style="background-color: brown; padding: 80px;">2</div>
+        <div style="background-color: darkgoldenrod; padding: 80px;">3</div>
+    </div>
+
+    <h3>display:flex; justify-content: flex-end;</h3>
+    <div style="display: flex; justify-content: flex-end;">
+        <div style="background-color: aqua; padding: 80px;">1</div>
+        <div style="background-color: brown; padding: 80px;">2</div>
+        <div style="background-color: darkgoldenrod; padding: 80px;">3</div>
+    </div>
+
+    <h3>display:flex; justify-content: space-around;</h3>
+    <div style="display: flex; justify-content: space-around;">
+        <div style="background-color: aqua; padding: 80px;">1</div>
+        <div style="background-color: brown; padding: 80px;">2</div>
+        <div style="background-color: darkgoldenrod; padding: 80px;">3</div>
+    </div>
+
+    <h3>display:flex; justify-content: space-between;</h3>
+    <div style="display: flex; justify-content: space-between;">
+        <div style="background-color: aqua; padding: 80px;">1</div>
+        <div style="background-color: brown; padding: 80px;">2</div>
+        <div style="background-color: darkgoldenrod; padding: 80px;">3</div>
+    </div>
+
+    <h2>Vertical Alignment</h2>
+
+    <h3>display:flex; background-color: yellow; height: 300px; align-items: flex-start;</h3>
+    <div style="display: flex; background-color: yellow; height: 300px; align-items: flex-start;">
+        <div style="background-color: aqua; padding: 80px;">1</div>
+        <div style="background-color: brown; padding: 80px;">2</div>
+        <div style="background-color: darkgoldenrod; padding: 80px;">3</div>
+    </div>
+
+    <h3>display:flex; background-color: yellow; height: 300px; align-items: center;</h3>
+    <div style="display: flex; background-color: yellow; height: 300px; align-items: center;">
+        <div style="background-color: aqua; padding: 80px;">1</div>
+        <div style="background-color: brown; padding: 80px;">2</div>
+        <div style="background-color: darkgoldenrod; padding: 80px;">3</div>
+    </div>
+
+    <h3>display:flex; background-color: yellow; height: 300px; align-items: flex-end;</h3>
+    <div style="display: flex; background-color: yellow; height: 300px; align-items: flex-end;">
+        <div style="background-color: aqua; padding: 80px;">1</div>
+        <div style="background-color: brown; padding: 80px;">2</div>
+        <div style="background-color: darkgoldenrod; padding: 80px;">3</div>
+    </div>
+
+    <h2>Flex Direction</h2>
+
+    <h3>display:flex; flex-direction: column;</h3>
+    <div style="display: flex; flex-direction: column;">
+        <div style="background-color: aqua;">1</div>
+        <div style="background-color: brown;">2</div>
+        <div style="background-color: darkgoldenrod;">3</div>
+    </div>
+
+    <h3>display:flex; flex-direction: column-reverse;</h3>
+    <div style="display: flex; flex-direction: column-reverse;">
+        <div style="background-color: aqua;">1</div>
+        <div style="background-color: brown;">2</div>
+        <div style="background-color: darkgoldenrod;">3</div>
+    </div>
+
+
+    <h3>display:flex; flex-direction: row;</h3>
+    <div style="display: flex; flex-direction: row;">
+        <div style="background-color: aqua;">1</div>
+        <div style="background-color: brown;">2</div>
+        <div style="background-color: darkgoldenrod;">3</div>
+    </div>
+
+    <h3>display:flex; flex-direction: row-reverse;</h3>
+    <div style="display: flex; flex-direction: row-reverse;">
+        <div style="background-color: aqua; padding: 100px;">1</div>
+        <div style="background-color: darkmagenta; padding: 100px;">2</div>
+        <div style="background-color: darkslategray; padding: 100px;">3</div>
+    </div>
+
+    <h3>display:flex; flex-wrap: wrap;</h3>
+    <div style="display: flex; flex-wrap: wrap;">
+        <div style="background-color: aqua; padding: 100px;">1</div>
+        <div style="background-color: darkmagenta; padding: 100px;">2</div>
+        <div style="background-color: darkslategray; padding: 100px;">3</div>
+        <div style="background-color: forestgreen; padding: 100px;">4</div>
+        <div style="background-color: gold; padding: 100px;">5</div>
+        <div style="background-color: indigo; padding: 100px;">6</div>
+        <div style="background-color: lawngreen; padding: 100px;">7</div>
+        <div style="background-color: lightsalmon; padding: 100px;">8</div>
+        <div style="background-color: orchid; padding: 100px;">9</div>
+        <div style="background-color: powderblue; padding: 100px;">10</div>
+        <div style="background-color: violet; padding: 100px;">11</div>
+        <div style="background-color: tomato; padding: 100px;">12</div>
+       
+    </div>
+
+    <h3>display:flex; flex-wrap: nowrap;</h3>
+    <div style="display: flex; flex-wrap: nowrap;">
+        <div style="background-color: aqua; padding: 100px;">1</div>
+        <div style="background-color: darkmagenta; padding: 100px;">2</div>
+        <div style="background-color: darkslategray; padding: 100px;">3</div>
+        <div style="background-color: forestgreen; padding: 100px;">4</div>
+        <div style="background-color: gold; padding: 100px;">5</div>
+        <div style="background-color: indigo; padding: 100px;">6</div>
+        <div style="background-color: lawngreen; padding: 100px;">7</div>
+        <div style="background-color: lightsalmon; padding: 100px;">8</div>
+        <div style="background-color: orchid; padding: 100px;">9</div>
+        <div style="background-color: powderblue; padding: 100px;">10</div>
+        <div style="background-color: violet; padding: 100px;">11</div>
+        <div style="background-color: tomato; padding: 100px;">12</div>       
+    </div>
+
+    <h3>display:flex; flex-wrap: wrap-reverse;</h3>
+    <div style="display: flex; flex-wrap: wrap-reverse;">
+        <div style="background-color: aqua; padding: 100px;">1</div>
+        <div style="background-color: darkmagenta; padding: 100px;">2</div>
+        <div style="background-color: darkslategray; padding: 100px;">3</div>
+        <div style="background-color: forestgreen; padding: 100px;">4</div>
+        <div style="background-color: gold; padding: 100px;">5</div>
+        <div style="background-color: indigo; padding: 100px;">6</div>
+        <div style="background-color: lawngreen; padding: 100px;">7</div>
+        <div style="background-color: lightsalmon; padding: 100px;">8</div>
+        <div style="background-color: orchid; padding: 100px;">9</div>
+        <div style="background-color: powderblue; padding: 100px;">10</div>
+        <div style="background-color: violet; padding: 100px;">11</div>
+        <div style="background-color: tomato; padding: 100px;">12</div>       
+    </div>
+
+    <h3>Shorthand = display: flex; flex-flow: row nowrap;</h3>
+    <div style="display: flex; flex-flow: row nowrap;">
+        <div style="background-color: aqua; padding: 100px;">1</div>
+        <div style="background-color: darkmagenta; padding: 100px;">2</div>
+        <div style="background-color: darkslategray; padding: 100px;">3</div>
+        <div style="background-color: forestgreen; padding: 100px;">4</div>
+        <div style="background-color: gold; padding: 100px;">5</div>
+        <div style="background-color: indigo; padding: 100px;">6</div>
+        <div style="background-color: lawngreen; padding: 100px;">7</div>
+        <div style="background-color: lightsalmon; padding: 100px;">8</div>
+        <div style="background-color: orchid; padding: 100px;">9</div>
+        <div style="background-color: powderblue; padding: 100px;">10</div>
+        <div style="background-color: violet; padding: 100px;">11</div>
+        <div style="background-color: tomato; padding: 100px;">12</div>       
+    </div>
+
+    <style>
+        h1 {
+            text-decoration: underline;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            text-decoration: underline;
+            text-transform: capitalize;
+        }
+
+        h3 {
+            text-decoration: wavy;
+            text-transform: lowercase;
+        }
+    </style>
+</body>
+</html>
