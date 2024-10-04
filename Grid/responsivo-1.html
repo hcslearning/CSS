@@ -6,6 +6,39 @@
     <title>CSS Grid - Ejemplo 1</title>
     <style>
         /* ESTRUCTURA */
+        html, body, div, nav, ul { margin: 0; padding: 0; height: 100%;}
+        #contenedor {            
+            min-height: 100vh;                    
+            display: grid;              
+        }                
+        #menu {
+            display: grid;
+            grid-template-columns: subgrid;
+        }        
+        #menu #hamburguesa {
+            align-self: center;            
+            justify-self: end;
+        }
+        /* ################################################################## */ 
+        /* PANTALLAS PEQUEÑAS */
+        @media screen and (max-width: 768px) {
+            #menu ul {
+                display: none;            
+                position: absolute;    
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+            }
+            #menu ul li.cerrar {
+                position: absolute;
+                right: 3rem;
+                top: 2rem;
+                color: white;
+            }
+        }
+        /* ################################################################## */ 
+        /* PANTALLAS GRANDES */
         @media screen and (min-width: 768px) {
             #contenedor {
                 display: grid;
@@ -15,20 +48,20 @@
             }    
             #header, #footer {
                 grid-column: 2/5;
-            }
+            }            
             #menu {
-                grid-column: 1/6;            
-                display: grid;
-                grid-template-columns: subgrid;
+                grid-column: 1/6;                            
             }
-            #menu menu {            
+            #menu #hamburguesa { display: none;}
+            #menu ul {
                 grid-column: 2/5;
                 display: grid;
                 grid-template-columns: repeat(auto-fill, 100px);
                 grid-template-rows: 40px;            
                 gap: 5px;
             }
-            #menu menu li {            
+            #menu ul li.cerrar { display: none; }                
+            #menu ul li {            
                 list-style-type: none;
                 display: grid;
                 align-items: center;
@@ -37,37 +70,38 @@
             #cuerpo {
                 grid-column: 3/4;                     
             }
+            /* Design - Big Screens */
+            #menu ul li {
+                background-color: green;
+            }
         }
-        html, body, div, menu, ul { margin: 0; padding: 0; height: 100%;}
-        #contenedor {
-            display: grid;
-            min-height: 100vh;
-        }  
         /* ################################################################## */ 
         /* ################################################################## */ 
         /* DISEÑO */
         #contenedor {         
-            background: red;         
+            background: red;               
         }
         #header {
-            background-color: darkolivegreen;
+            background-color: darkolivegreen;            
         }
         #menu {            
-            background-color: yellow;            
+            background-color: yellow;
         }
-        #menu menu {
+        #menu ul {
             background-color: black;
-        }
-        #menu menu li {
-            background-color: green;            
-        }
+            list-style-type: none;
+        }    
+        #menu #hamburguesa {
+            font-size: 1.5rem;
+            padding: 0.2rem;
+        }    
         #cuerpo {            
             background-color: indigo;            
-            font-size: 2rem;
+            font-size: 2rem;            
         }
         #footer {
             background-color: lightsalmon;
-            text-align: center;
+            text-align: center;            
         }
     </style>
 </head>
@@ -75,16 +109,20 @@
     <div id="contenedor">
         <header id="header">
             <h1>Grid Responsivo</h1>
-        </header>
-        <section id="menu">
-            <menu>
+        </header>        
+        <nav id="menu">
+            <ul>
                 <li><a href="#">Inicio</a></li>
                 <li><a href="#">Nosotros</a></li>
                 <li><a href="#">Servicios</a></li>
                 <li><a href="#">Sucursales</a></li>
                 <li><a href="#">Contacto</a></li>
-            </menu>
-        </section>        
+                <li class="cerrar"><a href="#" onclick="document.querySelector('#menu ul').style.display='none'">Cerrar (X)</a></li>
+            </ul>
+            <a id="hamburguesa" onclick="document.querySelector('#menu ul').style.display='block'">
+                &#9776;
+            </a>
+        </nav>        
         <main id="cuerpo">            
             <h2>Lorem ipsum</h2>
             <p>
