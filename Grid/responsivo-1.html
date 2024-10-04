@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grid - Ejemplo 1</title>
+    <style>
+        /* ESTRUCTURA */
+        @media screen and (min-width: 768px) {
+            #contenedor {
+                display: grid;
+                min-height: 100vh;         
+                grid-template-columns: 1fr 2fr 5fr 2fr 1fr;
+                grid-template-rows: auto auto 1fr auto;
+            }    
+            #header, #footer {
+                grid-column: 2/5;
+            }
+            #menu {
+                grid-column: 1/6;            
+                display: grid;
+                grid-template-columns: subgrid;
+            }
+            #menu menu {            
+                grid-column: 2/5;
+                display: grid;
+                grid-template-columns: repeat(auto-fill, 100px);
+                grid-template-rows: 40px;            
+                gap: 5px;
+            }
+            #menu menu li {            
+                list-style-type: none;
+                display: grid;
+                align-items: center;
+                justify-items: center;
+            }
+            #cuerpo {
+                grid-column: 3/4;                     
+            }
+        }
+        html, body, div, menu, ul { margin: 0; padding: 0; height: 100%;}
+        #contenedor {
+            display: grid;
+            min-height: 100vh;
+        }  
+        /* ################################################################## */ 
+        /* ################################################################## */ 
+        /* DISEÑO */
+        #contenedor {         
+            background: red;         
+        }
+        #header {
+            background-color: darkolivegreen;
+        }
+        #menu {            
+            background-color: yellow;            
+        }
+        #menu menu {
+            background-color: black;
+        }
+        #menu menu li {
+            background-color: green;            
+        }
+        #cuerpo {            
+            background-color: indigo;            
+            font-size: 2rem;
+        }
+        #footer {
+            background-color: lightsalmon;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="contenedor">
+        <header id="header">
+            <h1>Grid Responsivo</h1>
+        </header>
+        <section id="menu">
+            <menu>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Sucursales</a></li>
+                <li><a href="#">Contacto</a></li>
+            </menu>
+        </section>        
+        <main id="cuerpo">            
+            <h2>Lorem ipsum</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum quis quae ipsa, fugit hic doloremque architecto corporis quia ullam, necessitatibus voluptatum nihil debitisLorem ipsum dolor sit amet consectetur adipisicing elit. Rerum quis quae ipsa, fugit hic doloremque architecto corporis quia ullam, necessitatibus voluptatum nihil debitisLorem ipsum dolor sit amet consectetur adipisicing elit. Rerum quis quae ipsa, fugit hic doloremque architecto corporis quia ullam, necessitatibus voluptatum nihil debitisLorem ipsum dolor sit amet consectetur adipisicing elit. Rerum quis quae ipsa, fugit hic doloremque architecto corporis quia ullam, necessitatibus voluptatum nihil debitisLorem ipsum dolor sit amet consectetur adipisicing elit. Rerum quis quae ipsa, fugit hic doloremque architecto corporis quia ullam, necessitatibus voluptatum nihil debitisLorem ipsum dolor sit amet consectetur adipisicing elit. Rerum quis quae ipsa, fugit hic doloremque architecto corporis quia ullam, necessitatibus voluptatum nihil debitisLorem ipsum dolor sit amet consectetur adipisicing elit. Rerum quis quae ipsa, fugit hic doloremque architecto corporis quia ullam, necessitatibus voluptatum nihil debitisLorem ipsum dolor sit amet consectetur adipisicing elit. Rerum quis quae ipsa, fugit hic doloremque architecto corporis quia ullam, necessitatibus voluptatum nihil debitisLorem ipsum dolor sit amet consectetur adipisicing elit. Rerum quis quae 
+            </p>
+        </main>
+        <footer id="footer">
+            &copy; 2025
+        </footer>
+    </div>
+</body>
+</html>
